@@ -2501,3 +2501,181 @@ textarea.form-control {
   font-family: var(--font-mono);
 }
 
+/* ==========================================================================
+   MOBILE & SMALL DEVICE OPTIMIZATIONS (Smartphones, iOS & Android)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .hero-greeting {
+    font-size: 1rem;
+  }
+  
+  .hero-name {
+    font-size: 2.3rem;
+  }
+
+  .hero-summary {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .project-actions {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .project-actions .btn {
+    width: 100%;
+  }
+
+  .skills-badges-grid {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 0.75rem;
+  }
+
+  .skill-card-item {
+    padding: 0.85rem 0.6rem;
+  }
+
+  .skill-icon-large {
+    font-size: 1.8rem;
+  }
+
+  .skill-name {
+    font-size: 0.82rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+
+  .nav-brand {
+    font-size: 1.15rem;
+  }
+
+  .brand-avatar-box {
+    width: 36px;
+    height: 36px;
+  }
+
+  .hero-status-pill {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.75rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-name {
+    font-size: 1.95rem;
+  }
+
+  .hero-title-typewriter {
+    font-size: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .hero-badges-row {
+    gap: 0.4rem;
+  }
+
+  .hero-tag {
+    font-size: 0.78rem;
+    padding: 0.3rem 0.7rem;
+  }
+
+  .project-card {
+    border-radius: var(--radius-md);
+  }
+
+  .project-body {
+    padding: 1.25rem;
+  }
+
+  .project-title {
+    font-size: 1.2rem;
+  }
+
+  .recruiter-stat-card {
+    padding: 1.2rem 1rem;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  /* Modals Optimization for Small Screens */
+  .modal-card {
+    width: 94% !important;
+    margin: 1.5rem auto !important;
+    max-height: 90vh !important;
+  }
+
+  .modal-header {
+    padding: 1rem 1.25rem !important;
+  }
+
+  .modal-title {
+    font-size: 1.05rem !important;
+  }
+
+  .modal-body {
+    padding: 1.25rem 1rem !important;
+  }
+
+  /* Terminal CLI Optimization on Mobile */
+  .terminal-header {
+    padding: 0.6rem 0.9rem;
+  }
+
+  .terminal-title {
+    font-size: 0.78rem;
+  }
+
+  .terminal-body {
+    padding: 0.85rem;
+    font-size: 0.8rem;
+    max-height: 300px;
+  }
+
+  .t-prompt {
+    display: block;
+    margin-bottom: 0.15rem;
+  }
+
+  /* Filter Bar Mobile Scroll */
+  .project-filter-bar {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    margin-bottom: 2rem;
+  }
+
+  .filter-btn {
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    font-size: 0.82rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero-name {
+    font-size: 1.75rem;
+  }
+
+  .hero-actions .btn {
+    font-size: 0.88rem;
+    padding: 0.75rem 1rem;
+  }
+}
+
