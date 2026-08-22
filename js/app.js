@@ -122,38 +122,67 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ----------------- STAT COUNTERS ANIMATION -----------------
+  // ----------------- STATS COUNTER ANIMATION (MOBILE & DESKTOP) -----------------
   const counterElements = document.querySelectorAll('.stat-counter');
   let animated = false;
 
-  const counterObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting && !animated) {
-          animated = true;
-          counterElements.forEach((counter) => {
-            const target = +counter.getAttribute('data-target');
-            const duration = 1500;
-            const step = Math.ceil(target / (duration / 25));
-            let current = 0;
+  function runCounterAnimation() {
+    if (animated) return;
+    animated = true;
 
-            const timer = setInterval(() => {
-              current += step;
-              if (current >= target) {
-                counter.textContent = target;
-                clearInterval(timer);
-              } else {
-                counter.textContent = current;
-              }
-            }, 25);
-          });
+    counterElements.forEach((counter) => {
+      const target = +counter.getAttribute('data-target') || 0;
+      const duration = 1200;
+      const startTime = performance.now();
+
+      function updateCounter(currentTime) {
+        const elapsedTime = currentTime - startTime;
+        const progress = Math.min(elapsedTime / duration, 1);
+        const easeOutProgress = 1 - Math.pow(1 - progress, 3);
+        const currentValue = Math.floor(easeOutProgress * target);
+
+        counter.textContent = currentValue;
+
+        if (progress < 1) {
+          requestAnimationFrame(updateCounter);
+        } else {
+          counter.textContent = target;
         }
-      });
-    },
-    { threshold: 0.5 }
-  );
+      }
 
-  const recruiterSection = document.getElementById('recruiter-deck');
-  if (recruiterSection) counterObserver.observe(recruiterSection);
+      requestAnimationFrame(updateCounter);
+    });
+  }
+
+  // Low threshold (0.1) for mobile compatibility and observing stats grid directly
+  const statsContainer = document.querySelector('.recruiter-stats-grid') || document.getElementById('recruiter-deck');
+
+  if (statsContainer && 'IntersectionObserver' in window) {
+    const counterObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            runCounterAnimation();
+            counterObserver.disconnect();
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -20px 0px' }
+    );
+    counterObserver.observe(statsContainer);
+  } else {
+    runCounterAnimation();
+  }
+
+  // Passive scroll fallback for mobile screens
+  window.addEventListener('scroll', () => {
+    if (!animated && statsContainer) {
+      const rect = statsContainer.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom >= 0) {
+        runCounterAnimation();
+      }
+    }
+  }, { passive: true });
 
   // ----------------- PROJECT FILTERING -----------------
   const filterBtns = document.querySelectorAll('.filter-btn');
