@@ -11,12 +11,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const typedTarget = document.getElementById('typed-text');
   if (typedTarget) {
     const roles = [
-      'Full-Stack MERN Developer',
-      'Scalable Web Systems Architect',
-      'Data Structures & Algorithms Enthusiast',
-      'UI/UX & Front-End Design',
+      'Full-Stack MERN Development',
+      'Scalable Web Systems Architecture',
+      'Data Structures & Algorithms',
+      'Responsive UI/UX Front-End Design',
       'Database & Backend Optimization',
-      'API Development & Integration',
+      'REST API Development & Integration',
     ];
     let roleIndex = 0;
     let charIndex = 0;
