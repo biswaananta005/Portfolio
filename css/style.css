@@ -2504,13 +2504,143 @@ textarea.form-control {
 /* ==========================================================================
    MOBILE & SMALL DEVICE OPTIMIZATIONS (Smartphones, iOS & Android)
    ========================================================================== */
+html, body {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+  position: relative !important;
+}
+
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .hero-visual {
+    order: -1;
+    max-width: 100%;
+  }
+
+  .profile-card-wrapper {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .profile-image-box {
+    height: 350px;
+  }
+
+  .about-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .recruiter-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 768px) {
+  /* Prevent any horizontal overflow on mobile */
+  body, main, section, .container, .hero, .recruiter-bar, .projects-grid {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  /* 3-Line Hamburger Menu Toggle */
+  .mobile-toggle {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 42px !important;
+    height: 42px !important;
+    background: var(--bg-glass-card) !important;
+    border: 1px solid var(--border-subtle) !important;
+    border-radius: var(--radius-sm) !important;
+    color: var(--text-primary) !important;
+    font-size: 1.3rem !important;
+    cursor: pointer !important;
+    z-index: 1002 !important;
+  }
+
+  .mobile-toggle:hover {
+    border-color: var(--accent-cyan) !important;
+    color: var(--accent-cyan) !important;
+  }
+
+  .nav-hire-btn {
+    display: none !important; /* Hide header hire btn to keep hamburger menu clean & visible */
+  }
+
+  .nav-menu {
+    position: fixed !important;
+    top: var(--header-height) !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: calc(100vh - var(--header-height)) !important;
+    background: rgba(7, 11, 20, 0.98) !important;
+    backdrop-filter: blur(24px) !important;
+    -webkit-backdrop-filter: blur(24px) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 2rem 1.5rem !important;
+    gap: 1rem !important;
+    border-bottom: 1px solid var(--border-subtle) !important;
+    transform: translateY(-150%) !important;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    z-index: 999 !important;
+    overflow-y: auto !important;
+  }
+
+  .nav-menu.open {
+    transform: translateY(0) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7) !important;
+  }
+
+  .nav-menu .nav-link {
+    font-size: 1.15rem !important;
+    font-weight: 600 !important;
+    padding: 0.85rem 1.25rem !important;
+    border-radius: var(--radius-sm) !important;
+    width: 100% !important;
+    color: var(--text-secondary) !important;
+    border: 1px solid transparent !important;
+    display: block !important;
+  }
+
+  .nav-menu .nav-link.active,
+  .nav-menu .nav-link:hover {
+    color: var(--accent-cyan) !important;
+    background: rgba(0, 242, 254, 0.08) !important;
+    border-color: rgba(0, 242, 254, 0.2) !important;
+  }
+
+  .nav-mobile-cta {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    padding: 0.85rem 1.5rem !important;
+    margin-top: 0.5rem !important;
+  }
+
+  /* Hide floating badges on mobile so they never overflow viewport width */
+  .float-badge {
+    display: none !important;
+  }
+
   .hero-greeting {
     font-size: 1rem;
   }
   
   .hero-name {
-    font-size: 2.3rem;
+    font-size: 2.1rem;
   }
 
   .hero-summary {
@@ -2518,13 +2648,32 @@ textarea.form-control {
     line-height: 1.6;
   }
 
-  .project-actions {
-    flex-direction: column;
-    gap: 0.6rem;
+  /* Projects & Action Buttons on Mobile - All Buttons 100% Visible */
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.75rem !important;
   }
 
-  .project-actions .btn {
-    width: 100%;
+  .project-actions {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 0.75rem !important;
+    margin-top: 1.5rem !important;
+  }
+
+  .project-actions .btn,
+  .project-actions a.btn,
+  .project-actions button.btn {
+    width: 100% !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0.8rem 1rem !important;
+    font-size: 0.88rem !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+    white-space: normal !important;
   }
 
   .skills-badges-grid {
@@ -2543,11 +2692,33 @@ textarea.form-control {
   .skill-name {
     font-size: 0.82rem;
   }
+
+  .timeline::before {
+    left: 20px;
+  }
+
+  .timeline-item {
+    padding-left: 50px;
+  }
+
+  .timeline-node {
+    left: 5px;
+  }
+
+  .section {
+    padding: 3.5rem 0;
+  }
+}
+
+@media (min-width: 769px) {
+  .nav-mobile-cta {
+    display: none !important;
+  }
 }
 
 @media (max-width: 576px) {
   .container {
-    padding: 0 1.25rem;
+    padding: 0 1.25rem !important;
   }
 
   .nav-brand {
@@ -2567,11 +2738,11 @@ textarea.form-control {
   }
 
   .hero-name {
-    font-size: 1.95rem;
+    font-size: 1.85rem;
   }
 
   .hero-title-typewriter {
-    font-size: 1rem;
+    font-size: 0.98rem;
     flex-wrap: wrap;
   }
 
@@ -2582,6 +2753,21 @@ textarea.form-control {
   .hero-tag {
     font-size: 0.78rem;
     padding: 0.3rem 0.7rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .recruiter-stats-grid {
+    grid-template-columns: 1fr;
   }
 
   .project-card {
@@ -2604,11 +2790,13 @@ textarea.form-control {
     font-size: 2rem;
   }
 
-  /* Modals Optimization for Small Screens */
+  /* Modals Optimization for Mobile Screens */
   .modal-card {
-    width: 94% !important;
+    width: 92% !important;
+    max-width: 92% !important;
     margin: 1.5rem auto !important;
     max-height: 90vh !important;
+    overflow-x: hidden !important;
   }
 
   .modal-header {
@@ -2620,6 +2808,10 @@ textarea.form-control {
   }
 
   .modal-body {
+    padding: 1.25rem 1rem !important;
+  }
+
+  .resume-modal-body {
     padding: 1.25rem 1rem !important;
   }
 
@@ -2670,12 +2862,12 @@ textarea.form-control {
 
 @media (max-width: 380px) {
   .hero-name {
-    font-size: 1.75rem;
+    font-size: 1.65rem;
   }
 
   .hero-actions .btn {
-    font-size: 0.88rem;
-    padding: 0.75rem 1rem;
+    font-size: 0.86rem;
+    padding: 0.75rem 0.9rem;
   }
 }
 

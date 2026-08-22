@@ -88,12 +88,14 @@ document.addEventListener('DOMContentLoaded', () => {
     navMenu?.classList.toggle('open');
     const isOpen = navMenu?.classList.contains('open');
     mobileToggle.innerHTML = isOpen ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+    document.body.style.overflow = isOpen ? 'hidden' : '';
   });
 
-  // Close mobile menu on clicking any link
-  navLinks.forEach((link) => {
+  // Close mobile menu on clicking any link or mobile CTA
+  document.querySelectorAll('.nav-link, .nav-mobile-cta').forEach((link) => {
     link.addEventListener('click', () => {
       navMenu?.classList.remove('open');
+      document.body.style.overflow = '';
       if (mobileToggle) mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
     });
   });
