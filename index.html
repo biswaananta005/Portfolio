@@ -1,0 +1,1327 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biswa Ananta Jali | Full-Stack MERN Developer & Software Engineer | Placement Portfolio</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="Portfolio of Biswa Ananta Jali - Computer Engineering undergraduate at IIIT Bhubaneswar, Full-Stack MERN Developer with internship experience at MindBrain Innovations and NALCO.">
+  <meta name="keywords"
+    content="Biswa Ananta Jali, IIIT Bhubaneswar, Full Stack Developer, React.js, Node.js, Express.js, MongoDB, C++">
+  <meta name="author" content="Biswa Ananta Jali">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Biswa Ananta Jali - Full-Stack MERN Developer">
+  <meta property="og:description"
+    content="Computer Engineering undergraduate at IIIT Bhubaneswar. Explore flagship MERN projects, enterprise internships, and technical competencies.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/Biswa.jpeg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom Vanilla CSS Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Interactive Background Canvas & Ambient Gradients -->
+  <canvas id="particle-canvas"></canvas>
+  <div class="bg-ambient-orb orb-1"></div>
+  <div class="bg-ambient-orb orb-2"></div>
+  <div class="bg-ambient-orb orb-3"></div>
+
+  <!-- ==================== HEADER & NAVBAR ==================== -->
+  <header class="navbar" id="main-navbar">
+    <div class="container nav-container">
+      <a href="#home" class="nav-brand">
+        <span class="brand-avatar-box">
+          <img src="assets/profile.jpg" alt="Biswa Ananta Jali" class="brand-avatar-img">
+        </span>
+        <span class="brand-text">Biswa Ananta<span class="brand-dot">.</span></span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#recruiter-deck" class="nav-link">Recruiter Deck</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-btn" id="theme-toggle" aria-label="Toggle dark/light theme" title="Switch Theme">
+          <i class="fas fa-sun"></i>
+        </button>
+
+        <a href="#contact" class="btn btn-primary btn-sm">
+          <i class="fas fa-paper-plane"></i> Hire Biswa
+        </a>
+
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main>
+
+    <!-- ----------------- HERO SECTION ----------------- -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+
+        <!-- Left Hero Content -->
+        <div class="hero-content">
+          <div class="hero-status-pill">
+            <i class="fas fa-terminal"></i> B.Tech Computer Engineering • IIIT Bhubaneswar ('27)
+          </div>
+
+          <p class="hero-greeting">Hi there, I am</p>
+          <h1 class="hero-name">
+             <span class="gradient-text">Biswa</span>  Ananta  Jali
+          </h1>
+
+          <div class="hero-title-typewriter">
+            <span>Specializing in:</span>
+            <span class="typed-text" id="typed-text"></span>
+          </div>
+
+          <p class="hero-summary">
+            Computer Engineering undergraduate with hands-on internship experience in
+            <strong>MERN Stack Web Development</strong>, <strong>REST API Architecture</strong>, and <strong>Enterprise
+              Database Systems</strong>.
+            Passionate about building scalable, high-performance web applications with clean code, solid data
+            structures, and user-first design.
+          </p>
+
+          <!-- Quick Skills Badge Row -->
+          <div class="hero-badges-row">
+            <span class="hero-tag"><i class="fab fa-react"></i> React.js</span>
+            <span class="hero-tag"><i class="fab fa-node-js"></i> Node.js & Express</span>
+            <span class="hero-tag"><i class="fas fa-database"></i> MongoDB & Mongoose</span>
+            <span class="hero-tag"><i class="fas fa-server"></i> SQL & MS SQL Server</span>
+            <span class="hero-tag"><i class="fas fa-code"></i> C / C++ & DSA</span>
+          </div>
+
+          <!-- Hero Action CTAs -->
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fas fa-project-diagram"></i> Explore Projects
+            </a>
+            <button class="btn btn-outline open-resume-modal">
+              <i class="fas fa-file-invoice"></i> View Full Resume
+            </button>
+            <a href="#recruiter-deck" class="btn btn-outline">
+              <i class="fas fa-bolt" style="color:var(--accent-amber);"></i> Recruiter 30s Deck
+            </a>
+          </div>
+
+          <!-- Socials & Quick Connect -->
+          <div class="hero-socials">
+            <span class="social-label">Connect:</span>
+            <a href="https://www.linkedin.com/in/biswaananta005" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn Profile">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/biswaananta005" target="_blank" rel="noopener noreferrer" class="social-link"
+              title="GitHub Profile">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="mailto:biswaananta005@gmail.com" target="_blank" rel="noopener noreferrer" class="social-link" title="Send Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="tel:+919556500113" class="social-link" title="Call Direct">
+              <i class="fas fa-phone-alt"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Hero Visual / Profile Card -->
+        <div class="hero-visual">
+          <div class="profile-card-wrapper">
+            <div class="profile-card-glow"></div>
+
+            <div class="profile-card">
+              <div class="profile-image-box">
+                <img src="assets/Biswa.jpeg" alt="Biswa Ananta Jali - Full Stack MERN Developer" class="profile-photo">
+                <div class="profile-gradient-overlay"></div>
+                <div class="profile-info-overlay">
+                  <h3 class="profile-name-tag">Biswa Ananta Jali</h3>
+                  <p class="profile-inst-tag">
+                    <i class="fas fa-university"></i> IIIT Bhubaneswar • Class of 2027
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating Micro Badges -->
+            <div class="float-badge float-badge-1">
+              <div class="float-badge-icon icon-cyan">
+                <i class="fas fa-briefcase"></i>
+              </div>
+              <div class="float-badge-text">
+                <span class="float-badge-title">2+ Internships</span>
+                <span class="float-badge-sub">MindBrain & NALCO</span>
+              </div>
+            </div>
+
+        </div> 
+
+      </div>
+      </div>
+
+      </div>
+    </section>
+
+
+    <!-- ----------------- RECRUITER FAST-TRACK DECK (THE 30-SEC BAR) ----------------- -->
+    <section class="recruiter-bar" id="recruiter-deck">
+      <div class="container">
+
+        <div class="recruiter-header-badge">
+          <div class="recruiter-title-wrap">
+            <i class="fas fa-bolt recruiter-icon-pulse"></i>
+            <div>
+              <h2 class="recruiter-fast-title">Recruiter Fast-Look Deck</h2>
+              <p class="recruiter-fast-subtitle">Short on time? Here is everything you need in 30 seconds for placement
+                shortlisting.</p>
+            </div>
+          </div>
+
+          <div class="placement-pill">
+            <i class="fas fa-check-circle"></i> Open for SDE & Full-Stack 2026/2027 Roles
+          </div>
+        </div>
+
+        <!-- 4 Key Fast Stats -->
+        <div class="recruiter-stats-grid">
+          <div class="stat-card">
+            <div class="stat-number"><span class="stat-counter" data-target="2">0</span><span
+                class="stat-suffix">+</span></div>
+            <div class="stat-label">Production Internships (MERN & Enterprise Web)</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-number"><span class="stat-counter" data-target="100">0</span><span
+                class="stat-suffix">ms</span></div>
+            <div class="stat-label">Sub-100ms Query Latency on MongoDB Search Engine</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-number"><span class="stat-counter" data-target="3">0</span><span
+                class="stat-suffix">-Tier</span></div>
+            <div class="stat-label">RBAC Security & Verification Pipelines Built</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-number"><span class="stat-counter" data-target="2027">0</span></div>
+            <div class="stat-label">B.Tech Graduation Year (IIIT Bhubaneswar)</div>
+          </div>
+        </div>
+
+        <!-- Fast Role Matching Matrix -->
+        <div class="recruiter-fast-matrix">
+          <div class="matrix-column">
+            <h4><i class="fas fa-layer-group"></i> Full-Stack Engineering Match</h4>
+            <div class="matrix-pills">
+              <span class="matrix-pill"><i class="fas fa-check"></i> React.js SPA & UI Systems</span>
+              <span class="matrix-pill"><i class="fas fa-check"></i> Node.js & Express.js REST APIs</span>
+              <span class="matrix-pill"><i class="fas fa-check"></i> JWT Auth & Role Middleware</span>
+              <span class="matrix-pill"><i class="fas fa-check"></i> Multer Asset Pipelines</span>
+              <span class="matrix-pill"><i class="fas fa-check"></i> ASP.NET & C# Enterprise Modules</span>
+            </div>
+          </div>
+
+          <div class="matrix-column">
+            <h4><i class="fas fa-brain"></i> Core Problem Solving & Data</h4>
+            <div class="matrix-pills">
+              <span class="matrix-pill"><i class="fas fa-check"></i> C / C++ Data Structures & Algorithms</span>
+              <span class="matrix-pill"><i class="fas fa-check"></i> MongoDB & Mongoose Aggregations</span>
+              <span class="matrix-pill"><i class="fas fa-check"></i> MS SQL Server & MySQL Queries</span>
+              <span class="matrix-pill"><i class="fas fa-check"></i> Object-Oriented Design (OOP)</span>
+              <span class="matrix-pill"><i class="fas fa-check"></i> OS & Computer Networking Basics</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 1-Click Direct Action Row for Recruiters -->
+        <div class="fast-actions-bar">
+          <button class="btn btn-outline btn-sm copy-trigger" data-copy="biswaananta005@gmail.com" data-label="Email">
+            <i class="fas fa-copy"></i> Copy Email: biswaananta005@gmail.com
+          </button>
+
+          <button class="btn btn-outline btn-sm copy-trigger" data-copy="9556500113" data-label="Phone">
+            <i class="fas fa-phone"></i> Copy Phone: +91 9556500113
+          </button>
+
+          <button class="btn btn-primary btn-sm open-resume-modal">
+            <i class="fas fa-file-pdf"></i> Quick Resume View
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ----------------- ABOUT & VALUE PROPOSITION ----------------- -->
+    <section class="section" id="about">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-tag">Engineering Profile</span>
+          <h2 class="section-title">Driven by <span class="gradient-text">Scalable Solutions</span> & Impact</h2>
+          <p class="section-subtitle">A quick deep-dive into my background, technical philosophy, and campus leadership.
+          </p>
+        </div>
+
+        <div class="about-grid">
+
+          <!-- Left: Identity Spotlight Card -->
+          <div class="about-card-spotlight">
+            <div class="about-avatar-row">
+              <img src="assets/Biswa.jpeg" alt="Biswa Ananta Jali" class="about-avatar-img">
+              <div class="about-avatar-meta">
+                <h3>Biswa Ananta Jali</h3>
+                <p>Computer Engineering @ IIIT Bhubaneswar</p>
+              </div>
+            </div>
+
+            <div class="about-quick-specs">
+              <div class="spec-item">
+                <span class="spec-label">Degree</span>
+                <span class="spec-value">B.Tech in Computer Engineering</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Institution</span>
+                <span class="spec-value">IIIT Bhubaneswar (2023 - 2027)</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Secondary Ed.</span>
+                <span class="spec-value">Ravenshaw Higher Sec. School (2021 - 2023)</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Primary Stack</span>
+                <span class="spec-value">MERN (React, Node, Express, MongoDB)</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Location</span>
+                <span class="spec-value">Bhubaneswar, Odisha, India</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Engineering Narrative & 4 Pillars -->
+          <div class="about-narrative">
+            <h3>Full-Stack Builder with an Eye for Performance and Robust Architecture</h3>
+            <p class="about-text">
+              I am a final-year Computer Engineering undergraduate at <strong>IIIT Bhubaneswar</strong>.
+              My journey is defined by taking real-world problems and building end-to-end software systems that are
+              reliable, performant, and user-centric.
+            </p>
+            <p class="about-text">
+              During my internships at <strong>MindBrain Innovations</strong> and <strong>NALCO</strong>, I developed
+              everything from secure JWT-driven e-commerce modules to enterprise-scale coal testing and logistics
+              workflows. I enjoy tackling complex backend query optimizations as much as polishing responsive,
+              glassmorphic frontend interfaces.
+            </p>
+
+            <div class="core-pillars-grid">
+              <div class="pillar-card">
+                <i class="fas fa-cubes pillar-icon"></i>
+                <h4 class="pillar-title">Full-Stack Architecture</h4>
+                <p class="pillar-desc">Clean modular code in React.js and Node.js with RESTful design patterns.</p>
+              </div>
+
+              <div class="pillar-card">
+                <i class="fas fa-database pillar-icon"></i>
+                <h4 class="pillar-title">Database Indexing</h4>
+                <p class="pillar-desc">Composite indexing in MongoDB and structured relational schemas in SQL Server.
+                </p>
+              </div>
+
+              <div class="pillar-card">
+                <i class="fas fa-code-branch pillar-icon"></i>
+                <h4 class="pillar-title">Core CS & DSA</h4>
+                <p class="pillar-desc">Strong fundamentals in Object-Oriented Programming, C++, OS, and Networks.</p>
+              </div>
+
+              <div class="pillar-card">
+                <i class="fas fa-users-cog pillar-icon"></i>
+                <h4 class="pillar-title">Proven Leadership</h4>
+                <p class="pillar-desc">Secretary of Mess Society, IIIT Bhubaneswar, managing logistics and teams.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ----------------- WORK EXPERIENCE & INTERNSHIPS ----------------- -->
+    <section class="section section-alt" id="experience">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-tag">Work History</span>
+          <h2 class="section-title">Industry <span class="gradient-text">Experience</span></h2>
+          <p class="section-subtitle">Hands-on internships delivering production code for tech startups and major
+            enterprise PSU.</p>
+        </div>
+
+        <div class="timeline">
+
+          <!-- Experience 1: MindBrain Innovations -->
+          <div class="timeline-item">
+            <div class="timeline-node">
+              <i class="fas fa-code"></i>
+            </div>
+
+            <div class="experience-card">
+              <div class="exp-header">
+                <div>
+                  <h3 class="exp-role-title">Full Stack (MERN) Developer Intern</h3>
+                  <div class="exp-company-meta">
+                    <span>MindBrain Innovations Private Limited</span>
+                    <span class="exp-type">On-Site</span>
+                  </div>
+                </div>
+
+                <div class="exp-period-badge">
+                  <i class="far fa-calendar-alt"></i> May 2026 – Jul 2026
+                </div>
+              </div>
+
+              <div class="exp-location">
+                <i class="fas fa-map-marker-alt"></i> Bhubaneswar, Odisha, India
+              </div>
+
+              <div class="exp-bullets">
+                <p class="exp-bullet">
+                  Developed a <strong>comprehensive full-stack e-commerce web application</strong> leveraging the MERN
+                  stack: <strong>React.js, Node.js, Express.js, and MongoDB</strong>.
+                </p>
+                <p class="exp-bullet">
+                  Engineered <strong>responsive user interfaces</strong>, integrated secure <strong>REST APIs</strong>,
+                  and implemented robust <strong>JWT-based authentication</strong> to ensure session integrity and data
+                  security.
+                </p>
+                <p class="exp-bullet">
+                  Architected and established core business features including <strong>product catalog management,
+                    dynamic shopping cart logic, and multi-step order processing systems</strong>.
+                </p>
+              </div>
+
+              <div class="exp-tech-stack">
+                <span class="tech-tag">React.js</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Express.js</span>
+                <span class="tech-tag">MongoDB</span>
+                <span class="tech-tag">JWT Auth</span>
+                <span class="tech-tag">REST APIs</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience 2: NALCO -->
+          <div class="timeline-item">
+            <div class="timeline-node purple">
+              <i class="fas fa-industry"></i>
+            </div>
+
+            <div class="experience-card">
+              <div class="exp-header">
+                <div>
+                  <h3 class="exp-role-title">Project Intern (Web Development)</h3>
+                  <div class="exp-company-meta">
+                    <span style="color:var(--accent-violet);">National Aluminium Company Limited (NALCO)</span>
+                    <span class="exp-type"
+                      style="background:rgba(139,92,246,0.15);color:var(--accent-violet);">On-Site</span>
+                  </div>
+                </div>
+
+                <div class="exp-period-badge">
+                  <i class="far fa-calendar-alt"></i> Jun 2025 – Jul 2025
+                </div>
+              </div>
+
+              <div class="exp-location">
+                <i class="fas fa-map-marker-alt"></i> Angul, Odisha, India
+              </div>
+
+              <div class="exp-bullets">
+                <p class="exp-bullet">
+                  Developed an <strong>enterprise web application</strong> to streamline high-volume coal import and
+                  allocation processes between <strong>NALCO and Mahanadi Coalfields Limited (MCL)</strong>.
+                </p>
+                <p class="exp-bullet">
+                  Constructed responsive, accessible user interfaces utilizing <strong>ASP.NET, JavaScript, HTML5, CSS3,
+                    and Bootstrap</strong>.
+                </p>
+                <p class="exp-bullet">
+                  Implemented mission-critical backend modules with <strong>C# and Microsoft SQL Server</strong> for
+                  laboratory coal quality testing, multi-point logistics coordination, and automated <strong>GST
+                    tracking</strong>.
+                </p>
+              </div>
+
+              <div class="exp-tech-stack">
+                <span class="tech-tag">ASP.NET</span>
+                <span class="tech-tag">C#</span>
+                <span class="tech-tag">Microsoft SQL Server</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Bootstrap</span>
+                <span class="tech-tag">Logistics Tracking</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ----------------- FLAGSHIP PROJECTS ----------------- -->
+    <section class="section" id="projects">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-tag">Engineering Portfolio</span>
+          <h2 class="section-title">Flagship <span class="gradient-text">Projects</span></h2>
+          <p class="section-subtitle">Real-world systems engineered with modern web stacks, scalable architectures, and
+            solid database design.</p>
+        </div>
+
+        <!-- Filter Bar -->
+        <div class="project-filter-bar">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="mern">MERN Stack</button>
+          <button class="filter-btn" data-filter="react">React.js Frontends</button>
+          <button class="filter-btn" data-filter="enterprise">Enterprise Systems</button>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- Project 1: Rent Here -->
+          <article class="project-card" data-category="mern enterprise react">
+            <div class="project-preview-frame">
+              <div class="project-mock-header">
+                <span class="mock-circle"></span>
+                <span class="mock-circle"></span>
+                <span class="mock-circle"></span>
+              </div>
+              <div class="project-mock-canvas">
+                <i class="fas fa-building-user project-mock-icon"></i>
+                <span class="project-featured-badge">Flagship MERN</span>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <div class="project-type-tag">Full-Stack PG & Real Estate Rental Platform</div>
+              <h3 class="project-title">Rent Here – Full-Stack PG & Real Estate Rental Platform</h3>
+              <p class="project-desc">
+                Architected a production MERN rental marketplace featuring a 3-tier role-based access control system and an Admin verification pipeline to validate listing authenticity before publishing live.
+              </p>
+
+              <div class="project-highlights">
+                <div class="p-highlight-item">
+                  <i class="fas fa-shield-alt"></i>
+                  <span><strong>MERN & RBAC:</strong> 3-tier role-based access control (Admin, Seller, Buyer) paired with Admin verification pipeline for listing authenticity.</span>
+                </div>
+                <div class="p-highlight-item">
+                  <i class="fas fa-bolt"></i>
+                  <span><strong>High-Performance Search:</strong> Engineered MongoDB search with dynamic filters and composite sorting <code>{ isBoosted: -1, createdAt: -1 }</code>, achieving sub-100ms response times.</span>
+                </div>
+                <div class="p-highlight-item">
+                  <i class="fas fa-lock"></i>
+                  <span><strong>Security & UX:</strong> Implemented JWT authentication, role-based middleware, Multer image uploads, responsive Vanilla CSS, loading skeletons, and buyer-to-landlord inquiry tracking.</span>
+                </div>
+              </div>
+
+              <div class="project-tech-row">
+                <span class="tech-tag">React.js</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Express.js</span>
+                <span class="tech-tag">MongoDB</span>
+                <span class="tech-tag">Mongoose</span>
+                <span class="tech-tag">JWT</span>
+              </div>
+
+              <div class="project-actions">
+                <button class="btn btn-primary btn-sm open-project-modal" data-project="renthere">
+                  <i class="fas fa-sitemap"></i> Architecture Breakdown
+                </button>
+                <a href="https://github.com/biswaananta005/Rent-Here-Full-Stack-PG-Real-Estate-Rental-Platform.git" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                  <i class="fab fa-github"></i> GitHub Code
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Smart Mess Management System -->
+          <article class="project-card" data-category="mern react enterprise">
+            <div class="project-preview-frame">
+              <div class="project-mock-header">
+                <span class="mock-circle"></span>
+                <span class="mock-circle"></span>
+                <span class="mock-circle"></span>
+              </div>
+              <div class="project-mock-canvas">
+                <i class="fas fa-utensils project-mock-icon" style="color:var(--accent-violet);"></i>
+                <span class="project-featured-badge"
+                  style="border-color:var(--accent-violet);color:var(--accent-violet);">MERN Portal</span>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <div class="project-type-tag">Full-Stack Campus Dining Portal</div>
+              <h3 class="project-title">Smart Mess Management System</h3>
+              <p class="project-desc">
+                A full-stack MERN dining hall portal designed to eliminate campus food waste, automate daily meal headcount forecasting, and handle QR pass verifications and billing.
+              </p>
+
+              <div class="project-highlights">
+                <div class="p-highlight-item">
+                  <i class="fas fa-user-shield"></i>
+                  <span><strong>RBAC & REST APIs:</strong> Architected a MERN portal supporting Student, Mess Admin, and College Authority roles with JWT authorization and Email/Student Roll ID login.</span>
+                </div>
+                <div class="p-highlight-item">
+                  <i class="fas fa-chart-line"></i>
+                  <span><strong>Demand Forecasting:</strong> Built real-time headcount analytics reducing food wastage by ~30%, featuring preference locking and automated midnight reset.</span>
+                </div>
+                <div class="p-highlight-item">
+                  <i class="fas fa-qrcode"></i>
+                  <span><strong>QR Pass & Billing:</strong> Implemented dynamic QR passes to prevent double serving and monthly billing based on consumed meals with feedback analytics.</span>
+                </div>
+              </div>
+
+              <div class="project-tech-row">
+                <span class="tech-tag">React.js</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Express.js</span>
+                <span class="tech-tag">MongoDB</span>
+                <span class="tech-tag">Vite</span>
+                <span class="tech-tag">JWT</span>
+                <span class="tech-tag">REST APIs</span>
+              </div>
+
+              <div class="project-actions">
+                <button class="btn btn-primary btn-sm open-project-modal" data-project="smartmess">
+                  <i class="fas fa-sitemap"></i> View System Design
+                </button>
+                <a href="https://github.com/biswaananta005/Smart-Mess-Management-System.git" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                  <i class="fab fa-github"></i> GitHub Code
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ----------------- TECHNICAL SKILLS & CORE COMPETENCIES ----------------- -->
+    <section class="section section-alt" id="skills">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-tag">Competency Showcase</span>
+          <h2 class="section-title">Technical <span class="gradient-text">Skills</span> & Core Concepts</h2>
+          <p class="section-subtitle">Core engineering competencies, frameworks, databases, and tools mastered through academic excellence and production internships.</p>
+        </div>
+
+        <!-- Live Skill Search Input -->
+        <div class="skills-search-wrapper">
+          <i class="fas fa-search skills-search-icon"></i>
+          <input type="text" id="skill-search-input" class="skills-search-input"
+            placeholder="Search a skill (e.g. React, MongoDB, C++, SQL, DSA, Postman)...">
+        </div>
+
+        <div class="skills-grid">
+
+          <!-- Category 1: Frameworks & Libraries -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon"><i class="fab fa-react"></i></div>
+              <h3 class="skill-cat-title">Frameworks & Libraries</h3>
+            </div>
+
+            <div class="skills-badges-grid">
+              <div class="skill-card-item">
+                <i class="fab fa-react skill-icon-large" style="color:#61dafb;"></i>
+                <span class="skill-name">React.js</span>
+              </div>
+              <div class="skill-card-item">
+                <i class="fab fa-node-js skill-icon-large" style="color:#68a063;"></i>
+                <span class="skill-name">Node.js</span>
+              </div>
+              <div class="skill-card-item">
+                <i class="fas fa-server skill-icon-large" style="color:#00f2fe;"></i>
+                <span class="skill-name">Express.js</span>
+              </div>
+              <div class="skill-card-item">
+                <i class="fas fa-exchange-alt skill-icon-large" style="color:#38bdf8;"></i>
+                <span class="skill-name">RESTful APIs</span>
+              </div>
+              <div class="skill-card-item">
+                <i class="fab fa-html5 skill-icon-large" style="color:#e34f26;"></i>
+                <span class="skill-name">HTML5</span>
+              </div>
+              <div class="skill-card-item">
+                <i class="fab fa-css3-alt skill-icon-large" style="color:#1572b6;"></i>
+                <span class="skill-name">CSS3</span>
+              </div>
+              <div class="skill-card-item">
+                <i class="fab fa-bootstrap skill-icon-large" style="color:#7952b3;"></i>
+                <span class="skill-name">Bootstrap</span>
+              </div>
+              <div class="skill-card-item">
+                <i class="fab fa-microsoft skill-icon-large" style="color:#a855f7;"></i>
+                <span class="skill-name">ASP.NET (C#)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 2: Databases & Storage -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon"><i class="fas fa-database"></i></div>
+              <h3 class="skill-cat-title">Databases & Storage</h3>
+            </div>
+
+            <div class="skills-badges-grid">
+              <div class="skill-card-item">
+                <i class="fas fa-leaf skill-icon-large" style="color:#47a248;"></i>
+                <span class="skill-name">MongoDB</span>
+              </div>
+              <div class="skill-card-item">
+                <i class="fas fa-cubes skill-icon-large" style="color:#800000;"></i>
+                <span class="skill-name">Mongoose</span>
+              </div>
+              <div class="skill-card-item">
+                <i class="fas fa-server skill-icon-large" style="color:#eab308;"></i>
+                <span class="skill-name">MS SQL Server</span>
+              </div>
+              <div class="skill-card-item">
+                <i class="fas fa-database skill-icon-large" style="color:#00758f;"></i>
+                <span class="skill-name">MySQL</span>
+              </div>
+              <div class="skill-card-item">
+                <i class="fas fa-layer-group skill-icon-large" style="color:#00f2fe;"></i>
+                <span class="skill-name">Composite Indexing</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 3: Programming Languages -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon"><i class="fas fa-code"></i></div>
+              <h3 class="skill-cat-title">Programming Languages</h3>
+            </div>
+
+            <div class="skills-badges-grid">
+              <div class="skill-card-item">
+                <i class="fas fa-code skill-icon-large" style="color:#a8b9cc;"></i>
+                <span class="skill-name">C Language</span>
+              </div>
+              <div class="skill-card-item">
+                <i class="fas fa-terminal skill-icon-large" style="color:#00599c;"></i>
+                <span class="skill-name">C++</span>
+              </div>
+              <div class="skill-card-item">
+                <i class="fab fa-js skill-icon-large" style="color:#f7df1e;"></i>
+                <span class="skill-name">JavaScript (ES6+)</span>
+              </div>
+              <div class="skill-card-item">
+                <i class="fas fa-table skill-icon-large" style="color:#38bdf8;"></i>
+                <span class="skill-name">SQL</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 4: Tools & Platforms -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon"><i class="fas fa-tools"></i></div>
+              <h3 class="skill-cat-title">Tools & Platforms</h3>
+            </div>
+
+            <div class="skills-badges-grid">
+              <div class="skill-card-item">
+                <i class="fab fa-git-alt skill-icon-large" style="color:#f05032;"></i>
+                <span class="skill-name">Git & GitHub</span>
+              </div>
+              <div class="skill-card-item">
+                <i class="fas fa-paper-plane skill-icon-large" style="color:#ff6c37;"></i>
+                <span class="skill-name">Postman</span>
+              </div>
+              <div class="skill-card-item">
+                <i class="fas fa-bolt skill-icon-large" style="color:#bd34fe;"></i>
+                <span class="skill-name">Vite</span>
+              </div>
+              <div class="skill-card-item">
+                <i class="fas fa-code skill-icon-large" style="color:#007acc;"></i>
+                <span class="skill-name">VS Code</span>
+              </div>
+              <div class="skill-card-item">
+                <i class="fab fa-windows skill-icon-large" style="color:#5c2d91;"></i>
+                <span class="skill-name">Visual Studio</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 5: Core CS Fundamentals -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon"><i class="fas fa-laptop-code"></i></div>
+              <h3 class="skill-cat-title">Core CS Fundamentals</h3>
+            </div>
+
+            <div class="skills-badges-grid">
+              <div class="skill-card-item">
+                <i class="fas fa-project-diagram skill-icon-large" style="color:#10b981;"></i>
+                <span class="skill-name">Data Structures & Algorithms</span>
+              </div>
+              <div class="skill-card-item">
+                <i class="fas fa-cubes skill-icon-large" style="color:#8b5cf6;"></i>
+                <span class="skill-name">OOP Principles</span>
+              </div>
+              <div class="skill-card-item">
+                <i class="fas fa-database skill-icon-large" style="color:#38bdf8;"></i>
+                <span class="skill-name">DBMS</span>
+              </div>
+              <div class="skill-card-item">
+                <i class="fas fa-microchip skill-icon-large" style="color:#f59e0b;"></i>
+                <span class="skill-name">Operating Systems</span>
+              </div>
+              <div class="skill-card-item">
+                <i class="fas fa-network-wired skill-icon-large" style="color:#00f2fe;"></i>
+                <span class="skill-name">Computer Networks</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 6: Soft Skills & Leadership Mindset -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon"><i class="fas fa-users"></i></div>
+              <h3 class="skill-cat-title">Soft Skills & Leadership</h3>
+            </div>
+
+            <div class="skills-badges-grid">
+              <div class="skill-card-item">
+                <i class="fas fa-comments skill-icon-large" style="color:#00f2fe;"></i>
+                <span class="skill-name">Communication</span>
+              </div>
+              <div class="skill-card-item">
+                <i class="fas fa-crown skill-icon-large" style="color:#10b981;"></i>
+                <span class="skill-name">Leadership</span>
+              </div>
+              <div class="skill-card-item">
+                <i class="fas fa-brain skill-icon-large" style="color:#f59e0b;"></i>
+                <span class="skill-name">Critical Thinking</span>
+              </div>
+              <div class="skill-card-item">
+                <i class="fas fa-users-cog skill-icon-large" style="color:#8b5cf6;"></i>
+                <span class="skill-name">Teamwork</span>
+              </div>
+              <div class="skill-card-item">
+                <i class="fas fa-sliders-h skill-icon-large" style="color:#ec4899;"></i>
+                <span class="skill-name">Adaptability</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ----------------- EDUCATION & CAMPUS LEADERSHIP ----------------- -->
+    <section class="section" id="education">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-tag">Academics & Leadership</span>
+          <h2 class="section-title">Education & <span class="gradient-text">Leadership</span></h2>
+          <p class="section-subtitle">Strong academic foundation in computer engineering complemented by impactful
+            campus governance.</p>
+        </div>
+
+        <div class="edu-lead-grid">
+
+          <!-- Education Column -->
+          <div class="info-block-card">
+            <div class="info-block-header">
+              <div class="info-block-icon">
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+              <h3 class="info-block-title">Academic Background</h3>
+            </div>
+
+            <!-- College -->
+            <div class="edu-entry">
+              <div class="edu-logo-box">
+                <img src="assets/iiit_logo.png" alt="IIIT Bhubaneswar" class="edu-logo-img"
+                  onerror="this.src='assets/profile.jpg'">
+              </div>
+              <div class="edu-content">
+                <h4 class="edu-inst">International Institute of Information Technology, Bhubaneswar</h4>
+                <div class="edu-degree">Bachelor of Computer Engineering</div>
+                <div class="edu-time"><i class="far fa-calendar-alt"></i> Aug 2023 – May 2027 • Bhubaneswar, Odisha
+                </div>
+                <p style="font-size:0.88rem;color:var(--text-secondary);margin-top:0.5rem;">
+                  Rigorous computer engineering curriculum covering Data Structures & Algorithms, Object-Oriented
+                  Programming, Database Management Systems, Operating Systems, Computer Networks, and Software
+                  Engineering.
+                </p>
+              </div>
+            </div>
+
+            <!-- School -->
+            <div class="edu-entry" style="border-top:1px solid var(--border-subtle);padding-top:1.5rem;">
+              <div class="edu-logo-box" style="background:#fff;border-radius:50%;padding:3px;">
+                <img src="assets/ravenshaw_logo.png" alt="Ravenshaw Higher Secondary School" class="edu-logo-img" style="border-radius:50%;object-fit:contain;"
+                  onerror="this.src='assets/iiit_logo.png'">
+              </div>
+              <div class="edu-content">
+                <h4 class="edu-inst">Ravenshaw Higher Secondary School</h4>
+                <div class="edu-degree">Class-XII (Higher Secondary)</div>
+                <div class="edu-time"><i class="far fa-calendar-alt"></i> Sep 2021 – May 2023 • Cuttack, Odisha</div>
+                <p style="font-size:0.88rem;color:var(--text-secondary);margin-top:0.5rem;">
+                  Senior secondary education with focus on Science and Mathematics.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Leadership Column -->
+          <div class="info-block-card">
+            <div class="info-block-header">
+              <div class="info-block-icon" style="background:rgba(16,185,129,0.15);color:var(--accent-emerald);">
+                <i class="fas fa-crown"></i>
+              </div>
+              <h3 class="info-block-title">Campus Leadership</h3>
+            </div>
+
+            <div class="lead-entry">
+              <h4 class="lead-role-title">Secretary, Mess Society</h4>
+              <div class="lead-org">IIIT Bhubaneswar</div>
+
+              <div class="lead-highlights">
+                <p class="lead-bullet">
+                  Elected to lead campus dining hall operations, student welfare, quality audits, and vendor supply
+                  chain logistics for the entire institute student body.
+                </p>
+                <p class="lead-bullet">
+                  Spearheaded and organized large-scale <strong>food festivals</strong> and student engagement
+                  activities during annual college cultural and technical fests.
+                </p>
+                <p class="lead-bullet">
+                  Managed and mentored student volunteer teams during university-level events, resolving real-time
+                  operational bottlenecks under tight deadlines.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ----------------- INTERACTIVE DEVELOPER TERMINAL ----------------- -->
+    <section class="section section-alt" id="terminal-section">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-tag">Interactive CLI</span>
+          <h2 class="section-title">Developer <span class="gradient-text">Terminal</span></h2>
+          <p class="section-subtitle">Type commands to interactively explore Biswa's engineering profile, stack, and
+            contact details.</p>
+        </div>
+
+        <div class="terminal-wrapper">
+          <div class="terminal-header">
+            <div class="terminal-controls">
+              <span class="t-dot red"></span>
+              <span class="t-dot yellow"></span>
+              <span class="t-dot green"></span>
+            </div>
+            <div class="terminal-title">biswa@iiitbbsr-portfolio: ~ (zsh)</div>
+            <div class="terminal-badge">LIVE CLI</div>
+          </div>
+
+          <div class="terminal-body" id="terminal-body">
+            <div class="t-line">
+              <span class="t-prompt">biswa@iiitbbsr:~$</span> <span class="t-cmd">welcome</span>
+            </div>
+            <div class="t-line t-output">
+              Welcome to Biswa Ananta Jali's interactive developer terminal! 🚀<br>
+              Type <strong style="color:var(--accent-cyan);">help</strong> to see available commands or explore:
+              <strong style="color:#10b981;">skills</strong>, <strong style="color:#10b981;">projects</strong>, <strong
+                style="color:#10b981;">experience</strong>, <strong style="color:#10b981;">hire</strong>, <strong
+                style="color:#10b981;">contact</strong>.
+            </div>
+          </div>
+
+          <div class="terminal-input-row">
+            <span class="terminal-input-prompt">biswa@iiitbbsr:~$</span>
+            <input type="text" id="terminal-input" class="terminal-input"
+              placeholder="Type a command (e.g. 'help', 'skills', 'hire', 'projects')..." autocomplete="off"
+              spellcheck="false">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ----------------- CONTACT & PLACEMENT CONNECT ----------------- -->
+    <section class="section" id="contact">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-tag">Let's Connect</span>
+          <h2 class="section-title">LET’S CONNECT WITH <span class="gradient-text">BISWA</span></h2>
+          <p class="section-subtitle">Have a project, opportunity, or idea in mind? Let's build something great together.</p>
+        </div>
+
+        <div class="contact-grid">
+
+          <!-- Contact Info Cards -->
+          <div class="contact-info-panel">
+            <div class="contact-card-item">
+              <div class="contact-icon-box">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-meta">
+                <h4>Official Email</h4>
+                <p><a href="mailto:biswaananta005@gmail.com">biswaananta005@gmail.com</a></p>
+              </div>
+            </div>
+
+            <div class="contact-card-item">
+              <div class="contact-icon-box">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <div class="contact-meta">
+                <h4>Direct Phone / WhatsApp</h4>
+                <p><a href="tel:+919556500113">+91 9556500113</a></p>
+              </div>
+            </div>
+
+            <div class="contact-card-item">
+              <div class="contact-icon-box">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-meta">
+                <h4>Location</h4>
+                <p>Bhubaneswar, Odisha, India</p>
+              </div>
+            </div>
+
+            <div class="contact-card-item">
+              <div class="contact-icon-box">
+                <i class="fab fa-linkedin-in"></i>
+              </div>
+              <div class="contact-meta">
+                <h4>LinkedIn Network</h4>
+                <p><a href="https://linkedin.com/in/biswa-ananta-jali" target="_blank"
+                    rel="noopener noreferrer">linkedin.com/in/biswa-ananta-jali</a></p>
+              </div>
+            </div>
+
+            <div class="contact-card-item">
+              <div class="contact-icon-box">
+                <i class="fab fa-github"></i>
+              </div>
+              <div class="contact-meta">
+                <h4>GitHub Repositories</h4>
+                <p><a href="https://github.com/biswaananta005" target="_blank" rel="noopener noreferrer">github.com/biswaananta005</a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-card">
+            <form id="contact-form">
+              <div class="form-group">
+                <label for="c-name" class="form-label">Your Name / Recruiter Name *</label>
+                <input type="text" id="c-name" class="form-control" placeholder="e.g. John Doe (Tech Recruiter)"
+                  required>
+              </div>
+
+              <div class="form-group">
+                <label for="c-email" class="form-label">Work / Company Email *</label>
+                <input type="email" id="c-email" class="form-control" placeholder="e.g. john@company.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="c-subject" class="form-label">Opportunity / Subject *</label>
+                <input type="text" id="c-subject" class="form-control"
+                  placeholder="e.g. Full-Stack / SDE Placement Interview - Biswa Ananta Jali" required>
+              </div>
+
+              <div class="form-group">
+                <label for="c-message" class="form-label">Message / Role Details *</label>
+                <textarea id="c-message" class="form-control"
+                  placeholder="Share job description, interview schedule, or inquiry..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                <i class="fas fa-paper-plane"></i> Send Direct Placement Inquiry
+              </button>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="nav-brand">
+            <span class="brand-avatar-box">
+              <img src="assets/profile.jpg" alt="Biswa Ananta Jali" class="brand-avatar-img">
+            </span>
+            <span class="brand-text">Biswa Ananta<span class="brand-dot">.</span></span>
+          </div>
+          <p style="margin-top: 0.5rem;">Aspiring Software Engineer & Full-Stack MERN Developer • IIIT Bhubaneswar '27
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#recruiter-deck">Recruiter Deck</a>
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#education">Education</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Biswa Ananta Jali. Built with Pure Vanilla CSS & Modern JS. All rights reserved.</div>
+        <div style="display:flex;align-items:center;gap:1.25rem;">
+          <a href="mailto:biswaananta005@gmail.com"><i class="fas fa-envelope"></i> biswaananta005@gmail.com</a>
+          <a href="tel:+919556500113"><i class="fas fa-phone-alt"></i> +91 9556500113</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== PROJECT ARCHITECTURE MODAL ==================== -->
+  <div class="modal-backdrop" id="project-modal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modal-project-title">System Architecture</h3>
+        <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="modal-body" id="modal-project-body">
+        <!-- Injected via app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== FULL RESUME VIEWER MODAL ==================== -->
+  <div class="modal-backdrop" id="resume-modal">
+    <div class="modal-card" style="max-width: 900px;">
+      <div class="modal-header">
+        <h3 class="modal-title"><i class="fas fa-file-alt" style="color:var(--accent-cyan);"></i> Resume: Biswa Ananta
+          Jali</h3>
+        <div style="display:flex;gap:0.75rem;align-items:center;">
+          <button class="btn btn-outline btn-sm" id="print-resume-btn" title="Print Resume">
+            <i class="fas fa-print"></i> Print / Save PDF
+          </button>
+          <button class="modal-close-btn" id="close-resume-btn" aria-label="Close resume modal">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="modal-body"
+        style="background:#fff;color:#111;padding:2.5rem;font-family:'Plus Jakarta Sans',sans-serif;line-height:1.6;border-radius:0 0 var(--radius-lg) var(--radius-lg);">
+        <div style="text-align:center;border-bottom:2px solid #222;padding-bottom:1.25rem;margin-bottom:1.5rem;">
+          <h1
+            style="font-size:2.2rem;font-weight:800;color:#111;letter-spacing:1px;margin-bottom:0.25rem;font-family:'Outfit',sans-serif;">
+            BISWA ANANTA JALI</h1>
+          <p style="font-size:1.1rem;font-weight:600;color:#444;font-style:italic;margin-bottom:0.6rem;">
+            Software Engineer | Full-Stack MERN Developer</p>
+          <div style="display:flex;justify-content:center;flex-wrap:wrap;gap:1.2rem;font-size:0.9rem;color:#333;">
+            <span><i class="fas fa-phone-alt"></i> 9556500113</span>
+            <span><i class="fas fa-envelope"></i> biswaananta005@gmail.com</span>
+            <span><i class="fab fa-linkedin"></i> LinkedIn</span>
+            <span><i class="fab fa-github"></i> GitHub</span>
+            <span><i class="fas fa-map-marker-alt"></i> Bhubaneswar, India</span>
+          </div>
+        </div>
+
+        <div style="margin-bottom:1.5rem;">
+          <h3
+            style="font-size:1.1rem;font-weight:800;color:#111;border-bottom:1.5px solid #333;padding-bottom:3px;margin-bottom:0.5rem;text-transform:uppercase;">
+            Professional Summary</h3>
+          <p style="font-size:0.92rem;color:#333;text-align:justify;">
+            Computer Engineering student and Full-Stack MERN Developer with internship experience building web applications using React.js, Node.js, Express.js, and MongoDB. Skilled in REST APIs, JWT authentication, role-based access control, responsive UI development, and database-driven applications, seeking software engineering opportunities.
+          </p>
+        </div>
+
+        <div style="margin-bottom:1.5rem;">
+          <h3
+            style="font-size:1.1rem;font-weight:800;color:#111;border-bottom:1.5px solid #333;padding-bottom:3px;margin-bottom:0.5rem;text-transform:uppercase;">
+            Education</h3>
+          <div style="margin-bottom:0.75rem;">
+            <div style="display:flex;justify-content:space-between;font-weight:700;font-size:0.95rem;color:#111;">
+              <span>International Institute Of Information Technology, Bhubaneswar</span>
+              <span>Aug 2023 – May 2027</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-style:italic;font-size:0.9rem;color:#444;">
+              <span>Bachelor of Computer Engineering</span>
+              <span>Bhubaneswar, Odisha</span>
+            </div>
+          </div>
+          <div>
+            <div style="display:flex;justify-content:space-between;font-weight:700;font-size:0.95rem;color:#111;">
+              <span>Ravenshaw Higher Secondary School</span>
+              <span>Sep 2021 – May 2023</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-style:italic;font-size:0.9rem;color:#444;">
+              <span>Class XII</span>
+              <span>Cuttack, Odisha</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-bottom:1.5rem;">
+          <h3
+            style="font-size:1.1rem;font-weight:800;color:#111;border-bottom:1.5px solid #333;padding-bottom:3px;margin-bottom:0.5rem;text-transform:uppercase;">
+            Work Experience</h3>
+          <div style="margin-bottom:1rem;">
+            <div style="display:flex;justify-content:space-between;font-weight:700;font-size:0.95rem;color:#111;">
+              <span>Full Stack (MERN) Developer Intern</span>
+              <span>May 2026 – Jul 2026</span>
+            </div>
+            <div
+              style="display:flex;justify-content:space-between;font-style:italic;font-size:0.9rem;color:#444;margin-bottom:0.35rem;">
+              <span>MindBrain Innovations Private Limited</span>
+              <span>On-site, Bhubaneswar, Odisha</span>
+            </div>
+            <ul style="list-style:disc;padding-left:1.25rem;font-size:0.9rem;color:#333;">
+              <li>Developed a full-stack e-commerce application using <strong>React.js, Node.js, Express.js, and MongoDB</strong>, including product, cart, and order processing features.</li>
+              <li>Built responsive interfaces, integrated <strong>REST APIs</strong>, and implemented <strong>JWT-based authentication</strong> for secure user access.</li>
+            </ul>
+          </div>
+
+          <div>
+            <div style="display:flex;justify-content:space-between;font-weight:700;font-size:0.95rem;color:#111;">
+              <span>Project Intern (Web)</span>
+              <span>Jun 2025 – Jul 2025</span>
+            </div>
+            <div
+              style="display:flex;justify-content:space-between;font-style:italic;font-size:0.9rem;color:#444;margin-bottom:0.35rem;">
+              <span>National Aluminium Company Limited (NALCO)</span>
+              <span>On-site, Angul, Odisha</span>
+            </div>
+            <ul style="list-style:disc;padding-left:1.25rem;font-size:0.9rem;color:#333;">
+              <li>Developed an enterprise web application to streamline coal import processes between NALCO and MCL using <strong>JavaScript, HTML, CSS, and Bootstrap</strong>.</li>
+              <li>Implemented backend modules using <strong>C# and Microsoft SQL Server</strong> for coal testing, logistics, and GST tracking.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div style="margin-bottom:1.5rem;">
+          <h3
+            style="font-size:1.1rem;font-weight:800;color:#111;border-bottom:1.5px solid #333;padding-bottom:3px;margin-bottom:0.5rem;text-transform:uppercase;">
+            Projects</h3>
+          <div style="margin-bottom:1rem;">
+            <div style="display:flex;justify-content:space-between;align-items:center;font-weight:700;font-size:0.95rem;color:#111;">
+              <span>Rent Here – Full-Stack PG & Real Estate Rental Platform</span>
+              <a href="https://github.com/biswaananta005/Rent-Here-Full-Stack-PG-Real-Estate-Rental-Platform.git" target="_blank" rel="noopener noreferrer" style="font-size:0.85rem;color:#007acc;text-decoration:underline;">GitHub</a>
+            </div>
+            <ul style="list-style:disc;padding-left:1.25rem;font-size:0.9rem;color:#333;">
+              <li><strong>MERN & RBAC:</strong> Architected a MERN rental platform with <strong>3-tier role-based access control</strong> (Admin, Seller, Buyer) and an Admin verification pipeline for listing authenticity.</li>
+              <li><strong>High-Performance Search:</strong> Engineered MongoDB search with <strong>dynamic filters</strong> and composite sorting, achieving <strong>sub-100ms response times</strong> for efficient property discovery.</li>
+              <li><strong>Security & UX:</strong> Implemented <strong>JWT authentication</strong>, role-based middleware, Multer image uploads, responsive Vanilla CSS, loading skeletons, and buyer-to-landlord inquiry tracking.</li>
+            </ul>
+            <div style="font-size:0.85rem;color:#555;margin-top:0.25rem;"><em>Tech Stack: React.js, Node.js, Express.js, MongoDB, Mongoose, JWT</em></div>
+          </div>
+
+          <div>
+            <div style="display:flex;justify-content:space-between;align-items:center;font-weight:700;font-size:0.95rem;color:#111;">
+              <span>Smart Mess Management System</span>
+              <a href="https://github.com/biswaananta005/Smart-Mess-Management-System.git" target="_blank" rel="noopener noreferrer" style="font-size:0.85rem;color:#007acc;text-decoration:underline;">GitHub</a>
+            </div>
+            <ul style="list-style:disc;padding-left:1.25rem;font-size:0.9rem;color:#333;">
+              <li><strong>RBAC & REST APIs:</strong> Architected a MERN portal supporting <strong>Student, Mess Admin, and College Authority roles</strong> with <strong>JWT authorization</strong> and Email/Student Roll ID login.</li>
+              <li><strong>Demand Forecasting:</strong> Built real-time headcount analytics reducing food wastage by approximately <strong>30%</strong>, with preference locking and automated midnight reset.</li>
+              <li><strong>QR Pass & Billing:</strong> Implemented dynamic QR passes to prevent double serving and monthly billing based on consumed meals with feedback analytics.</li>
+            </ul>
+            <div style="font-size:0.85rem;color:#555;margin-top:0.25rem;"><em>Tech Stack: React.js, JavaScript, HTML, CSS, Node.js, Express.js, MongoDB, Vite, JWT, REST APIs</em></div>
+          </div>
+        </div>
+
+        <div style="margin-bottom:1.5rem;">
+          <h3
+            style="font-size:1.1rem;font-weight:800;color:#111;border-bottom:1.5px solid #333;padding-bottom:3px;margin-bottom:0.5rem;text-transform:uppercase;">
+            Skills</h3>
+          <div style="font-size:0.9rem;color:#333;line-height:1.7;">
+            <div><strong>Programming Languages:</strong> C, C++, JavaScript, SQL</div>
+            <div><strong>Frameworks & Libraries:</strong> React.js, Node.js, Express.js, HTML5, CSS3, Bootstrap, REST APIs</div>
+            <div><strong>Databases:</strong> MongoDB, Mongoose, Microsoft SQL Server, MySQL</div>
+            <div><strong>Tools & Platforms:</strong> Git, GitHub, VS Code, Visual Studio, Postman, Vite</div>
+            <div><strong>Core Concepts:</strong> Data Structures and Algorithms, Object-Oriented Programming, DBMS, Operating Systems, Computer Networking</div>
+          </div>
+        </div>
+
+        <div>
+          <h3
+            style="font-size:1.1rem;font-weight:800;color:#111;border-bottom:1.5px solid #333;padding-bottom:3px;margin-bottom:0.5rem;text-transform:uppercase;">
+            Leadership</h3>
+          <ul style="list-style:disc;padding-left:1.25rem;font-size:0.9rem;color:#333;">
+            <li><strong>Secretary, Mess Society, IIIT Bhubaneswar</strong></li>
+            <li>Organized food festivals and student engagement activities while managing volunteer teams during college events.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Modules -->
+  <script src="js/particles.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
