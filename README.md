@@ -67,3 +67,4 @@ Welcome to the official portfolio repository of **Biswa Ananta Jali**. This port
 - **LinkedIn**: [linkedin.com/in/biswaananta005](https://www.linkedin.com/in/biswaananta005)
 - **GitHub**: [github.com/biswaananta005](https://github.com/biswaananta005)
 - **Location**: Bhubaneswar, Odisha, India
+- **Portfolio**: (https://biswa-ananta-portfolio.onrender.com)
